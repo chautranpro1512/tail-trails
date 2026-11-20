@@ -70,30 +70,9 @@ p{margin:0}a{color:inherit}
 
 /* HERO */
 .hero{padding-block:clamp(2rem,5vw,4rem) clamp(2.5rem,5vw,4rem)}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(2rem,4vw,3.5rem);align-items:start}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(2rem,4vw,3.5rem);align-items:center}
 .hero-copy{display:grid;gap:1.2rem;justify-items:start}
 
-/* Quick-book widget */
-.qb{width:100%;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:1.2rem 1.25rem 1.3rem;display:grid;gap:1rem;box-shadow:0 18px 40px -24px rgba(10,30,22,.35);margin-top:.4rem}
-.qb-row{display:grid;gap:.5rem}
-.qb-label{font:700 .85rem/1.2 var(--font-body);color:var(--ink)}
-.chips{display:flex;flex-wrap:wrap;gap:.45rem}
-.chip{position:relative}
-.chip input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
-.chip span{display:inline-flex;align-items:center;gap:.4rem;min-height:40px;padding:0 .9rem;border-radius:999px;border:1.5px solid var(--line);background:var(--bg);font-weight:600;font-size:.9rem;cursor:pointer;transition:border-color .15s,background .15s}
-.chip input:checked+span{border-color:var(--brand);background:var(--surface-2);color:var(--brand)}
-.chip input:focus-visible+span{outline:3px solid var(--accent);outline-offset:2px}
-.chip input:disabled+span{opacity:.4;cursor:not-allowed;text-decoration:line-through}
-.qb-2{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
-.stepper{display:flex;align-items:center;gap:.4rem}
-.stepper button{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);font:700 1.1rem var(--font-body);cursor:pointer}
-.stepper output{min-width:2ch;text-align:center;font:700 1.1rem var(--font-mono)}
-.qb input[type=date]{min-height:42px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);padding:0 .7rem;font:inherit;width:100%}
-.qb-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.8rem;border-top:1px dashed var(--line);padding-top:1rem}
-.est{display:grid}
-.est small{font:500 .7rem/1.2 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
-.est b{font:800 1.7rem/1.1 var(--font-display);color:var(--brand);font-variant-numeric:tabular-nums}
-.est i{font-style:normal;font-size:.8rem;color:var(--ink-soft)}
 
 /* Pet playground */
 .play{position:relative;border-radius:28px 28px 28px 110px;overflow:hidden;background:linear-gradient(160deg,#DCEBDD 0%,#EFE3C1 100%);aspect-ratio:4/4.3;border:1px solid var(--line);touch-action:manipulation;user-select:none;-webkit-user-select:none}
@@ -149,7 +128,7 @@ p{margin:0}a{color:inherit}
 .report-note{font-size:.8rem;line-height:1.4;color:var(--ink-soft)}
 @media (max-width:900px){.hero-grid{grid-template-columns:minmax(0,1fr)}.play{aspect-ratio:4/3.8}.hero-visual{order:-1}}
 @media (max-width:560px){.hint{display:none}.play{aspect-ratio:1/1.08}.hero-visual .report{display:none}}
-@media (max-width:520px){.qb-2{grid-template-columns:1fr}.report{grid-template-columns:1fr}.report .stats{grid-column:1;grid-row:auto}}
+@media (max-width:520px){.report{grid-template-columns:1fr}.report .stats{grid-column:1;grid-row:auto}}
 
 /* Trust strip */
 .trust{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);border-radius:18px;background:var(--surface);overflow:hidden}
@@ -171,8 +150,6 @@ p{margin:0}a{color:inherit}
 .svc-foot{display:flex;justify-content:space-between;align-items:end;gap:.5rem;margin-top:.4rem;padding-top:.8rem;border-top:1px solid var(--line)}
 .price{font:800 1.6rem/1 var(--font-display);color:var(--brand);font-variant-numeric:tabular-nums}
 .price small{display:block;font:500 .7rem/1.4 var(--font-mono);color:var(--ink-soft);margin-top:.2rem}
-.svc .pick{background:none;border:0;color:var(--brand);font:700 .9rem var(--font-body);cursor:pointer;padding:.3rem 0}
-.svc .pick:hover{text-decoration:underline}
 .packs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1.4rem}
 .pack{border:2px solid var(--brand);border-radius:16px;padding:1.1rem 1.2rem;display:grid;gap:.3rem;background:var(--surface)}
 .pack-label{font:500 .72rem/1.2 var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--brand)}
@@ -183,17 +160,15 @@ p{margin:0}a{color:inherit}
 @media (max-width:900px){.svc-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.svc-grid,.packs{grid-template-columns:1fr}}
 
-/* Every visit includes */
-.incl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.6rem;list-style:none;margin:0;padding:0}
-.incl li{border-top:2px solid var(--band-line);padding-top:1rem;display:grid;gap:.4rem;align-content:start}
-.incl b{font-size:1.6rem}
-.incl p{color:var(--band-soft);font-size:.95rem}
-.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.6rem;list-style:none;margin:3rem 0 0;padding:0;counter-reset:step}
+/* How it works: one simple step list */
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1.4rem;list-style:none;margin:0;padding:0;counter-reset:step}
 .steps li{border-top:2px solid var(--band-line);padding-top:1.1rem;display:grid;gap:.5rem;align-content:start}
-.steps li::before{counter-increment:step;content:counter(step);font:800 2.6rem/1 var(--font-display);color:var(--accent)}
+.steps li::before{counter-increment:step;content:"Step " counter(step);font:500 .8rem/1 var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.steps .ico{font-size:2rem;line-height:1}
 .steps p{color:var(--band-soft);font-size:.95rem}
-@media (max-width:900px){.incl,.steps{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.incl,.steps{grid-template-columns:1fr}}
+.steps-cta{margin-top:2.6rem}
+@media (max-width:1000px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
 
 /* Photo slots */
 .ph{position:relative;margin:0;overflow:hidden;aspect-ratio:var(--ar,4/3);border-radius:18px;background:linear-gradient(145deg,var(--ph-a),var(--ph-b))}
@@ -317,30 +292,6 @@ p{margin:0}a{color:inherit}
       <p class="eyebrow">Pet care for dogs, cats &amp; small pets · Moose Jaw, SK</p>
       <h1>Pet care that feels like <span class="mark">family</span>, right here in Moose Jaw</h1>
       <p class="lede">Walks, drop-in visits and overnight stays in your own home. Trained, background-checked caregivers, and a photo report after every visit.</p>
-
-      <form class="qb" id="quick" aria-label="Find the right care">
-        <div class="qb-row">
-          <span class="qb-label" id="lbl-pet">My pet is a…</span>
-          <div class="chips" role="radiogroup" aria-labelledby="lbl-pet">
-            <label class="chip"><input type="radio" name="qpet" value="Dog" checked><span>🐶 Dog</span></label>
-            <label class="chip"><input type="radio" name="qpet" value="Cat"><span>🐱 Cat</span></label>
-            <label class="chip"><input type="radio" name="qpet" value="Small pet"><span>🐰 Small pet</span></label>
-          </div>
-        </div>
-        <div class="qb-row">
-          <span class="qb-label" id="lbl-svc">I need…</span>
-          <div class="chips" role="radiogroup" aria-labelledby="lbl-svc" id="qsvc"></div>
-        </div>
-        <div>
-          <div class="qb-row"><span class="qb-label" id="lbl-n">How many pets?</span>
-            <div class="stepper" aria-labelledby="lbl-n"><button type="button" id="nMinus" aria-label="Fewer pets">−</button><output id="nPets">1</output><button type="button" id="nPlus" aria-label="More pets">+</button></div>
-          </div>
-        </div>
-        <div class="qb-foot">
-          <div class="est" aria-live="polite"><small>Estimated price</small><b id="estPrice">$20</b><i id="estNote">per 30-min walk</i></div>
-          <button class="btn btn-accent" type="submit">Book a free meet &amp; greet →</button>
-        </div>
-      </form>
     </div>
 
     <!-- Interactive pet -->
@@ -451,44 +402,44 @@ p{margin:0}a{color:inherit}
     <div class="head">
       <p class="eyebrow">Services &amp; prices</p>
       <h2>Care for every kind of pet</h2>
-      <p class="lede">Choose a single visit, or save with a pack. All prices in Canadian dollars.</p>
+      <p class="lede">Choose a single visit, or save with a pack. All prices in Canadian dollars. Tell us what you need when we call you.</p>
     </div>
     <div class="svc-grid">
       <article class="svc">
         <div class="ico" aria-hidden="true">🦮</div><h3>Dog walk, 30 min</h3>
         <p>A solo walk, or a small group of friendly dogs. Great for busy weekdays.</p>
         <div class="who"><span>Dogs</span></div>
-        <div class="svc-foot"><span class="price">$20<small>per walk</small></span><button class="pick" data-svc="walk30">Book →</button></div>
+        <div class="svc-foot"><span class="price">$20<small>per walk</small></span></div>
       </article>
       <article class="svc">
         <div class="ico" aria-hidden="true">🐕</div><h3>Dog walk, 60 min</h3>
         <p>A longer route for high-energy breeds that need to burn it off.</p>
         <div class="who"><span>Dogs</span></div>
-        <div class="svc-foot"><span class="price">$35<small>per walk</small></span><button class="pick" data-svc="walk60">Book →</button></div>
+        <div class="svc-foot"><span class="price">$35<small>per walk</small></span></div>
       </article>
       <article class="svc">
         <div class="ico" aria-hidden="true">🏠</div><h3>Drop-in visit</h3>
         <p>20–30 minutes: food, fresh water, play, litter box or cage cleaned, and a check that everyone is well.</p>
         <div class="who"><span>Dogs</span><span>Cats</span><span>Small pets</span></div>
-        <div class="svc-foot"><span class="price">$15<small>per visit</small></span><button class="pick" data-svc="dropin">Book →</button></div>
+        <div class="svc-foot"><span class="price">$15<small>per visit</small></span></div>
       </article>
       <article class="svc">
         <div class="ico" aria-hidden="true">🌙</div><h3>Overnight house sitting</h3>
         <p>A caregiver stays the night in your home, so your pets keep their routine while you travel.</p>
         <div class="who"><span>Dogs</span><span>Cats</span><span>Small pets</span></div>
-        <div class="svc-foot"><span class="price" data-price="overnight">Quote<small>per night</small></span><button class="pick" data-svc="overnight">Ask →</button></div>
+        <div class="svc-foot"><span class="price" data-price="overnight">Quote<small>per night</small></span></div>
       </article>
       <article class="svc">
         <div class="ico" aria-hidden="true">🚗</div><h3>Pet taxi</h3>
         <p>A safe ride to the vet, the groomer or the park, and back home again.</p>
         <div class="who"><span>Dogs</span><span>Cats</span><span>Small pets</span></div>
-        <div class="svc-foot"><span class="price">$25<small>per trip</small></span><button class="pick" data-svc="taxi">Book →</button></div>
+        <div class="svc-foot"><span class="price">$25<small>per trip</small></span></div>
       </article>
       <article class="svc">
         <div class="ico" aria-hidden="true">🧸</div><h3>Companion time</h3>
         <p>Play, cuddles and company for pets who are home alone all day, or older pets who need a gentle hand.</p>
         <div class="who"><span>Dogs</span><span>Cats</span><span>Small pets</span></div>
-        <div class="svc-foot"><span class="price">$22<small>per hour</small></span><button class="pick" data-svc="companion">Book →</button></div>
+        <div class="svc-foot"><span class="price">$22<small>per hour</small></span></div>
       </article>
     </div>
     <div class="packs">
@@ -503,20 +454,16 @@ p{margin:0}a{color:inherit}
 <section class="sec sec-band" id="how">
   <div class="wrap">
     <div class="head">
-      <p class="eyebrow">Every visit includes</p>
-      <h2>You'll always know how their day went</h2>
+      <p class="eyebrow">How it works</p>
+      <h2>Simple, step by step</h2>
+      <p class="lede">From sign-up to your first photo report in five easy steps.</p>
     </div>
-    <ul class="incl">
-      <li><b aria-hidden="true">📸</b><h3>Photos</h3><p>A few pictures of your pet from every visit.</p></li>
-      <li><b aria-hidden="true">📝</b><h3>Visit report</h3><p>Time, food, water, bathroom breaks and mood, written up for you.</p></li>
-      <li><b aria-hidden="true">🔑</b><h3>Home checked</h3><p>Doors locked, lights as you like them, mail brought in if you ask.</p></li>
-      <li><b aria-hidden="true">💬</b><h3>Quick replies</h3><p>Message us during a booking and we answer.</p></li>
-    </ul>
     <ol class="steps">
-      <li><h3>Leave your details</h3><p>Name, phone, email and type of pet. That's it. We call you.</p></li>
-      <li><h3>Free meet &amp; greet</h3><p>We visit your home to meet your pet, learn the routine and collect a key.</p></li>
-      <li><h3>Choose a schedule</h3><p>One-off visits, a regular weekly plan, or care while you travel.</p></li>
-      <li><h3>Relax</h3><p>Photos and a report arrive after every visit.</p></li>
+      <li><span class="ico" aria-hidden="true">✍️</span><h3>Sign up</h3><p>Fill in the short form below: your name, phone, email and type of pet. That's all.</p></li>
+      <li><span class="ico" aria-hidden="true">📞</span><h3>We call you</h3><p>By the next business day, to hear what your pet needs and answer your questions.</p></li>
+      <li><span class="ico" aria-hidden="true">🤝</span><h3>Free meet &amp; greet</h3><p>We come to your home to meet your pet, learn the routine and pick up a key.</p></li>
+      <li><span class="ico" aria-hidden="true">🐾</span><h3>We care for your pet</h3><p>Walks, food, water and play. We lock up and check your home before we leave.</p></li>
+      <li><span class="ico" aria-hidden="true">📸</span><h3>You get photos &amp; a report</h3><p>After every visit, so you always know how their day went.</p></li>
     </ol>
   </div>
 </section>
@@ -667,15 +614,6 @@ const $ = id => document.getElementById(id);
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 $('yr').textContent = new Date().getFullYear();
 
-/* ---------- services (one list used by widget + form) ---------- */
-const SERVICES = {
-  walk30:    {label:'Dog walk, 30 min', short:'Walk 30 min', price:20, unit:'per 30-min walk', pets:['Dog']},
-  walk60:    {label:'Dog walk, 60 min', short:'Walk 60 min', price:35, unit:'per 60-min walk', pets:['Dog']},
-  dropin:    {label:'Drop-in visit', short:'Drop-in', price:15, unit:'per visit', pets:['Dog','Cat','Small pet']},
-  overnight: {label:'Overnight house sitting', short:'Overnight', price:CONFIG.overnightPrice, unit:'per night', pets:['Dog','Cat','Small pet']},
-  taxi:      {label:'Pet taxi', short:'Pet taxi', price:25, unit:'per trip', pets:['Dog','Cat','Small pet']},
-  companion: {label:'Companion time', short:'Companion', price:22, unit:'per hour', pets:['Dog','Cat','Small pet']}
-};
 if (CONFIG.overnightPrice) document.querySelector('[data-price=overnight]').innerHTML = '$' + CONFIG.overnightPrice + '<small>per night</small>';
 
 /* ---------- contact details ---------- */
@@ -690,43 +628,6 @@ if (CONFIG.overnightPrice) document.querySelector('[data-price=overnight]').inne
   }
 })();
 
-/* ---------- quick-book widget ---------- */
-const quick = {pet:'Dog', svc:'walk30', n:1};
-function renderSvcChips() {
-  const box = $('qsvc'); box.innerHTML = '';
-  Object.entries(SERVICES).forEach(([k, s]) => {
-    const ok = s.pets.includes(quick.pet);
-    const l = document.createElement('label'); l.className = 'chip';
-    l.innerHTML = '<input type="radio" name="qsvc" value="' + k + '"' + (k === quick.svc ? ' checked' : '') + (ok ? '' : ' disabled') + '><span>' + s.short + '</span>';
-    box.appendChild(l);
-  });
-}
-function updateEstimate() {
-  const s = SERVICES[quick.svc];
-  if (!s.price) { $('estPrice').textContent = 'Quote'; $('estNote').textContent = 'we price overnights at the meet & greet'; return; }
-  $('estPrice').textContent = '$' + s.price;
-  $('estNote').textContent = s.unit + (quick.n > 1 ? ' · extra pets confirmed at meet & greet' : '');
-}
-document.querySelectorAll('input[name=qpet]').forEach(r => r.addEventListener('change', () => {
-  quick.pet = r.value;
-  if (!SERVICES[quick.svc].pets.includes(quick.pet)) quick.svc = 'dropin';
-  renderSvcChips(); updateEstimate();
-  if (quick.pet === 'Cat') setSpecies('cat'); else if (quick.pet === 'Dog') setSpecies('dog');
-}));
-$('qsvc').addEventListener('change', e => { if (e.target.name === 'qsvc') { quick.svc = e.target.value; updateEstimate(); } });
-$('nMinus').onclick = () => { quick.n = Math.max(1, quick.n - 1); $('nPets').textContent = quick.n; updateEstimate(); };
-$('nPlus').onclick = () => { quick.n = Math.min(6, quick.n + 1); $('nPets').textContent = quick.n; updateEstimate(); };
-renderSvcChips(); updateEstimate();
-
-function goToForm(svc, pet) {
-  if (svc) $('f-service').value = svc;
-  if (pet) $('f-pettype').value = pet;
-  $('err-pettype').textContent = '';
-  $('signup').scrollIntoView({behavior: reduce ? 'auto' : 'smooth'});
-  setTimeout(() => $('f-name').focus({preventScroll: true}), reduce ? 0 : 650);
-}
-$('quick').addEventListener('submit', e => { e.preventDefault(); goToForm(quick.svc, quick.pet); });
-document.querySelectorAll('.pick').forEach(b => b.addEventListener('click', () => goToForm(b.dataset.svc)));
 
 /* ---------- interactive pet ---------- */
 const play = $('play'), pet = $('pet'), bubble = $('bubble'), ball = $('ball'), svg = play.querySelector('svg.scene');
@@ -848,7 +749,7 @@ $('treatBtn').addEventListener('click', () => {
     if (firstBad) { firstBad.focus(); setStatus('Please fix the highlighted fields.', 'bad'); return; }
 
     const data = Object.fromEntries(new FormData(form).entries());
-    data.serviceLabel = (SERVICES[data.service] || {label: ''}).label;
+    data.serviceLabel = '';
     data.consent = 'yes'; data.page = location.href;
     const first = data.name.trim().split(/\s+/)[0];
 
@@ -864,7 +765,7 @@ $('treatBtn').addEventListener('click', () => {
       $('doneText').textContent = 'Thanks, ' + first + '! We\'ll contact you ' + (out.callByText ? 'by ' + out.callByText : 'by the next business day') +
         ' to hear about your ' + data.petType.toLowerCase().replace('more than one kind','pets') + ' and set up a free meet & greet. A confirmation is on its way to ' + data.email + '.';
       form.hidden = true; $('done').hidden = false; $('done').focus();
-      form.reset(); $('f-service').value = ''; setStatus('');
+      form.reset(); setStatus('');
       setSpecies(data.petType === 'Cat' ? 'cat' : species);
     } catch (err) {
       setStatus('Sorry, your request didn\'t go through. Please try again' + (CONFIG.phone ? ' or call ' + (CONFIG.phoneDisplay || CONFIG.phone) : '') + '.', 'bad');
