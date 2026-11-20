@@ -1,0 +1,877 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Tail Trails · Pet Care in Moose Jaw, SK</title>
+<meta name="description" content="Tail Trails: dog walking, drop-in visits, overnight house sitting, pet taxi and companion care for dogs, cats and small pets in Moose Jaw, Saskatchewan. Free meet & greet.">
+<meta property="og:title" content="Tail Trails · Pet care in Moose Jaw">
+<meta property="og:description" content="Walks, drop-ins and overnight sitting for dogs, cats and small pets. Photo report after every visit.">
+<meta name="theme-color" content="#1F4638">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='%232D5B4A'%3E%3Cellipse cx='32' cy='43' rx='14' ry='11'/%3E%3Cellipse cx='13' cy='29' rx='6' ry='8'/%3E%3Cellipse cx='25' cy='16' rx='6' ry='8.5'/%3E%3Cellipse cx='39' cy='16' rx='6' ry='8.5'/%3E%3Cellipse cx='51' cy='29' rx='6' ry='8'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=DM+Mono:wght@400;500&family=Figtree:wght@400..700&display=swap">
+<style>
+:root{
+  --bg:#F5F8F3;--surface:#FFFFFF;--surface-2:#E7F0E8;--ink:#13251E;--ink-soft:#485E54;--line:#D2DDD4;
+  --brand:#2D5B4A;--band:#1F4638;--band-ink:#F2F7F3;--band-soft:#B9D0C3;--band-line:#3A6554;
+  --accent:#E8A020;--accent-ink:#1B1405;--mark:rgba(232,160,32,.5);--bad:#B3261E;
+  --ph-a:#CFE0D3;--ph-b:#EBD9AB;--ph-paw:rgba(45,91,74,.22);
+  --fur:#C98B4B;--fur-dark:#8E5A2B;--fur-light:#F3D9B1;--cat:#7A7F8A;--cat-dark:#4C515B;--cat-light:#D9DCE2;
+  --font-display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --font-body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"DM Mono",ui-monospace,Menlo,Consolas,monospace;--r:16px;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0D1814;--surface:#14241E;--surface-2:#1A2E26;--ink:#E8F0EA;--ink-soft:#A3B8AC;--line:#2B4237;
+  --brand:#7CC3A3;--band:#122B22;--band-ink:#EAF2EC;--band-soft:#A9C4B5;--band-line:#2F5242;
+  --accent:#F0B045;--mark:rgba(240,176,69,.38);--bad:#FF8A80;--ph-a:#1F3A2F;--ph-b:#3A3320;--ph-paw:rgba(124,195,163,.25);color-scheme:dark}}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-padding-top:5rem}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--font-body);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;margin:0;color:var(--ink)}
+h1{font-size:clamp(2.3rem,1rem + 4.6vw,4rem);line-height:1.02;font-weight:800;letter-spacing:-.025em}
+h2{font-size:clamp(1.8rem,1rem + 2.6vw,2.8rem);line-height:1.08;font-weight:800;letter-spacing:-.02em}
+h3{font-size:1.15rem;line-height:1.25;font-weight:700}
+p{margin:0}a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1160px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.sec{padding-block:clamp(3rem,7vw,5.5rem)}
+.sec-plain{background:var(--bg)}.sec-surface{background:var(--surface)}.sec-tint{background:var(--surface-2)}
+.sec-band{background:var(--band);color:var(--band-ink)}.sec-band h2,.sec-band h3{color:var(--band-ink)}
+.eyebrow{font:500 .75rem/1.3 var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--brand)}
+.sec-band .eyebrow{color:var(--accent)}
+.lede{font-size:clamp(1.05rem,.95rem + .5vw,1.22rem);color:var(--ink-soft);max-width:36rem}
+.sec-band .lede{color:var(--band-soft)}
+.mark{background:linear-gradient(transparent 60%,var(--mark) 60%)}
+.head{display:grid;gap:1rem;margin-bottom:2.4rem;max-width:44rem}
+.skip{position:absolute;left:-999px;top:8px;z-index:100;background:var(--accent);color:var(--accent-ink);padding:8px 12px;border-radius:8px}
+.skip:focus{left:8px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:50px;padding:0 1.5rem;border-radius:999px;border:2px solid transparent;font:700 1rem/1 var(--font-body);text-decoration:none;cursor:pointer;transition:transform .15s ease,background-color .15s ease}
+.btn-accent{background:var(--accent);color:var(--accent-ink)}.btn-accent:hover{transform:translateY(-1px)}
+.btn-ghost{border-color:var(--ink);color:var(--ink);background:transparent}.btn-ghost:hover{background:var(--surface-2)}
+.btn-sm{min-height:40px;padding:0 1.15rem;font-size:.9rem}
+.btn[disabled]{opacity:.6;cursor:wait;transform:none}
+
+/* Header */
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top-in{display:flex;align-items:center;gap:1.5rem;min-height:64px}
+.brand{display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;font:800 1.3rem/1 var(--font-display);letter-spacing:-.02em;margin-right:auto}
+.brand svg{width:28px;height:28px;fill:var(--brand)}
+.nav{display:flex;gap:1.5rem}
+.nav a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--ink-soft)}.nav a:hover{color:var(--ink)}
+.tel{font:500 .9rem var(--font-mono);text-decoration:none;color:var(--brand);white-space:nowrap}
+@media (max-width:980px){.nav{display:none}}
+@media (max-width:520px){.top .tel{display:none}}
+
+/* HERO */
+.hero{padding-block:clamp(2rem,5vw,4rem) clamp(2.5rem,5vw,4rem)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(2rem,4vw,3.5rem);align-items:start}
+.hero-copy{display:grid;gap:1.2rem;justify-items:start}
+
+/* Quick-book widget */
+.qb{width:100%;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:1.2rem 1.25rem 1.3rem;display:grid;gap:1rem;box-shadow:0 18px 40px -24px rgba(10,30,22,.35);margin-top:.4rem}
+.qb-row{display:grid;gap:.5rem}
+.qb-label{font:700 .85rem/1.2 var(--font-body);color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.chip span{display:inline-flex;align-items:center;gap:.4rem;min-height:40px;padding:0 .9rem;border-radius:999px;border:1.5px solid var(--line);background:var(--bg);font-weight:600;font-size:.9rem;cursor:pointer;transition:border-color .15s,background .15s}
+.chip input:checked+span{border-color:var(--brand);background:var(--surface-2);color:var(--brand)}
+.chip input:focus-visible+span{outline:3px solid var(--accent);outline-offset:2px}
+.chip input:disabled+span{opacity:.4;cursor:not-allowed;text-decoration:line-through}
+.qb-2{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.stepper{display:flex;align-items:center;gap:.4rem}
+.stepper button{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);font:700 1.1rem var(--font-body);cursor:pointer}
+.stepper output{min-width:2ch;text-align:center;font:700 1.1rem var(--font-mono)}
+.qb input[type=date]{min-height:42px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);padding:0 .7rem;font:inherit;width:100%}
+.qb-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.8rem;border-top:1px dashed var(--line);padding-top:1rem}
+.est{display:grid}
+.est small{font:500 .7rem/1.2 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.est b{font:800 1.7rem/1.1 var(--font-display);color:var(--brand);font-variant-numeric:tabular-nums}
+.est i{font-style:normal;font-size:.8rem;color:var(--ink-soft)}
+
+/* Pet playground */
+.play{position:relative;border-radius:28px 28px 28px 110px;overflow:hidden;background:linear-gradient(160deg,#DCEBDD 0%,#EFE3C1 100%);aspect-ratio:4/4.3;border:1px solid var(--line);touch-action:manipulation;user-select:none;-webkit-user-select:none}
+@media (prefers-color-scheme:dark){.play{background:linear-gradient(160deg,#1F3A2F,#3A3320)}}
+.play svg.scene{position:absolute;inset:0;width:100%;height:100%;display:block}
+.play-ui{position:absolute;top:.8rem;left:.8rem;right:.8rem;display:flex;justify-content:space-between;align-items:center;gap:.5rem;z-index:3}
+.seg{display:inline-flex;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:3px}
+.seg button{border:0;background:transparent;color:var(--ink-soft);font:700 .85rem var(--font-body);padding:.45rem .85rem;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--brand);color:var(--surface)}
+.pets{font:500 .75rem/1 var(--font-mono);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:.55rem .8rem;color:var(--ink);white-space:nowrap}
+.play-actions{position:absolute;left:.8rem;bottom:.8rem;display:flex;gap:.5rem;z-index:3;flex-wrap:wrap}
+.play-actions button{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:.55rem .9rem;font:700 .85rem var(--font-body);cursor:pointer}
+.play-actions button:hover{border-color:var(--brand)}
+.hint{position:absolute;right:.9rem;bottom:.9rem;font:500 .7rem var(--font-mono);color:var(--ink-soft);z-index:3;text-align:right;max-width:9rem}
+.bubble{position:absolute;z-index:4;background:var(--surface);color:var(--ink);border:2px solid var(--ink);border-radius:16px;padding:.35rem .75rem;font:800 1rem var(--font-display);transform:translate(-50%,-100%) scale(.6);opacity:0;transition:transform .2s cubic-bezier(.3,1.6,.5,1),opacity .2s;pointer-events:none;white-space:nowrap}
+.bubble.on{opacity:1;transform:translate(-50%,-110%) scale(1)}
+.heart{position:absolute;z-index:4;pointer-events:none;font-size:1.4rem;animation:float 1.1s ease-out forwards}
+@keyframes float{from{transform:translate(-50%,0) scale(.6);opacity:1}to{transform:translate(calc(-50% + var(--dx)),-90px) scale(1.2);opacity:0}}
+#pet{cursor:pointer;transform-origin:200px 330px;outline:none}
+#pet:focus,#pet:focus-visible{outline:none}
+.play,.play *{-webkit-tap-highlight-color:transparent}
+.play svg.scene:focus,.play svg.scene *:focus{outline:none}
+#pet.hop{animation:hop .45s ease}
+@keyframes hop{30%{transform:translateY(-18px) scaleY(1.04)}60%{transform:translateY(0) scaleY(.96)}}
+.tail{transform-box:fill-box}
+#dogTail{transform-origin:0% 100%;animation:wag 1s ease-in-out infinite}
+#pet.happy #dogTail{animation-duration:.22s}
+@keyframes wag{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(18deg)}}
+#catTail{transform-origin:0% 100%;animation:sway 2.6s ease-in-out infinite}
+#pet.happy #catTail{animation-duration:.9s}
+@keyframes sway{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(10deg)}}
+.blink{transform-box:fill-box;transform-origin:center;animation:blink 4.5s infinite}
+@keyframes blink{0%,94%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
+#tongue{transform-box:fill-box;transform-origin:top;transition:transform .2s}
+#pet:not(.happy) #tongue{transform:scaleY(.4)}
+.ear{transform-box:fill-box;transition:transform .25s}
+#pet.happy .earL{transform:rotate(-10deg)}#pet.happy .earR{transform:rotate(10deg)}
+#ball{transition:none}
+.species-cat .dog-only{display:none}.species-dog .cat-only{display:none}
+
+.hero-visual{display:grid;gap:.8rem}
+.report{background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:.9rem 1.1rem;display:grid;grid-template-columns:auto 1fr;gap:.35rem 1.4rem;align-items:center}
+.report-tag,.report-pet{grid-column:1}
+.report .stats{grid-column:2;grid-row:1 / span 2}
+.report-note{grid-column:1 / -1}
+.report-tag{display:flex;align-items:center;gap:.5rem;font:500 .65rem/1 var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+.report-tag i{width:8px;height:8px;border-radius:50%;background:var(--accent);display:block}
+.report-pet{font:800 1.15rem/1.1 var(--font-display)}
+.report-pet span{font:500 .8rem var(--font-body);color:var(--ink-soft)}
+.stats{display:grid;grid-template-columns:repeat(3,auto);justify-content:space-between;gap:.4rem;margin:0}
+.stats dt{font:500 .6rem/1.2 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.stats dd{margin:.1rem 0 0;font:500 .95rem/1.2 var(--font-mono)}
+.report-note{font-size:.8rem;line-height:1.4;color:var(--ink-soft)}
+@media (max-width:900px){.hero-grid{grid-template-columns:minmax(0,1fr)}.play{aspect-ratio:4/3.8}.hero-visual{order:-1}}
+@media (max-width:560px){.hint{display:none}.play{aspect-ratio:1/1.08}.hero-visual .report{display:none}}
+@media (max-width:520px){.qb-2{grid-template-columns:1fr}.report{grid-template-columns:1fr}.report .stats{grid-column:1;grid-row:auto}}
+
+/* Trust strip */
+.trust{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);border-radius:18px;background:var(--surface);overflow:hidden}
+.trust div{padding:1.1rem 1.2rem;display:flex;gap:.7rem;align-items:flex-start;border-right:1px solid var(--line);font-weight:600;font-size:.95rem}
+.trust div:last-child{border-right:0}
+.trust svg{width:20px;height:20px;flex:none;color:var(--brand);margin-top:.15rem}
+.trust small{display:block;font-weight:400;color:var(--ink-soft);font-size:.82rem}
+@media (max-width:860px){.trust{grid-template-columns:1fr 1fr}.trust div:nth-child(2){border-right:0}.trust div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media (max-width:460px){.trust{grid-template-columns:1fr}.trust div{border-right:0;border-bottom:1px solid var(--line)}.trust div:last-child{border-bottom:0}}
+
+/* Services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.svc{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:1.4rem 1.4rem 1.2rem;display:grid;gap:.6rem;align-content:start;transition:border-color .2s,transform .2s}
+.svc:hover{border-color:var(--brand);transform:translateY(-2px)}
+.svc .ico{width:48px;height:48px;border-radius:14px;background:var(--surface-2);display:grid;place-items:center;font-size:1.5rem}
+.svc p{color:var(--ink-soft);font-size:.95rem}
+.who{display:flex;gap:.35rem;flex-wrap:wrap}
+.who span{font:500 .68rem/1 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:.35rem .55rem;color:var(--ink-soft)}
+.svc-foot{display:flex;justify-content:space-between;align-items:end;gap:.5rem;margin-top:.4rem;padding-top:.8rem;border-top:1px solid var(--line)}
+.price{font:800 1.6rem/1 var(--font-display);color:var(--brand);font-variant-numeric:tabular-nums}
+.price small{display:block;font:500 .7rem/1.4 var(--font-mono);color:var(--ink-soft);margin-top:.2rem}
+.svc .pick{background:none;border:0;color:var(--brand);font:700 .9rem var(--font-body);cursor:pointer;padding:.3rem 0}
+.svc .pick:hover{text-decoration:underline}
+.packs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1.4rem}
+.pack{border:2px solid var(--brand);border-radius:16px;padding:1.1rem 1.2rem;display:grid;gap:.3rem;background:var(--surface)}
+.pack-label{font:500 .72rem/1.2 var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--brand)}
+.pack-price{font:800 2rem/1.1 var(--font-display)}
+.pack p{font-size:.92rem;color:var(--ink-soft)}
+.save{justify-self:start;margin-top:.3rem;background:var(--accent);color:var(--accent-ink);font:700 .78rem/1 var(--font-body);padding:.4rem .7rem;border-radius:999px}
+.fine{margin-top:1.2rem;font-size:.88rem;color:var(--ink-soft);max-width:46rem}
+@media (max-width:900px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.svc-grid,.packs{grid-template-columns:1fr}}
+
+/* Every visit includes */
+.incl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.6rem;list-style:none;margin:0;padding:0}
+.incl li{border-top:2px solid var(--band-line);padding-top:1rem;display:grid;gap:.4rem;align-content:start}
+.incl b{font-size:1.6rem}
+.incl p{color:var(--band-soft);font-size:.95rem}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.6rem;list-style:none;margin:3rem 0 0;padding:0;counter-reset:step}
+.steps li{border-top:2px solid var(--band-line);padding-top:1.1rem;display:grid;gap:.5rem;align-content:start}
+.steps li::before{counter-increment:step;content:counter(step);font:800 2.6rem/1 var(--font-display);color:var(--accent)}
+.steps p{color:var(--band-soft);font-size:.95rem}
+@media (max-width:900px){.incl,.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.incl,.steps{grid-template-columns:1fr}}
+
+/* Photo slots */
+.ph{position:relative;margin:0;overflow:hidden;aspect-ratio:var(--ar,4/3);border-radius:18px;background:linear-gradient(145deg,var(--ph-a),var(--ph-b))}
+.ph-paws{position:absolute;inset:0;width:100%;height:100%;fill:var(--ph-paw)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+
+/* Why */
+.why{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.why .ph{--ar:4/5;border-radius:110px 28px 28px 28px}
+.why-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.6rem 2rem;margin-top:1.8rem}
+.why-list div{display:grid;gap:.35rem;align-content:start}
+.why-list p{color:var(--ink-soft);font-size:.95rem}
+@media (max-width:900px){.why{grid-template-columns:1fr}.why .ph{--ar:16/9;border-radius:28px}}
+@media (max-width:560px){.why-list{grid-template-columns:1fr}}
+
+/* Winter + safety */
+.winter{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.winter .ph{--ar:4/3}
+.big-temp{font:800 clamp(2.6rem,6vw,4.2rem)/1 var(--font-display);color:var(--brand);letter-spacing:-.03em}
+.safety{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:clamp(2.5rem,5vw,4rem)}
+.safety>div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.5rem 1.6rem;display:grid;gap:.9rem;align-content:start}
+.safety ul{margin:0;padding:0;list-style:none;display:grid;gap:.65rem}
+.safety li{display:flex;gap:.65rem;align-items:flex-start;font-size:.97rem}
+.safety li svg{width:18px;height:18px;flex:none;margin-top:.2rem}
+.safety .yes svg{color:var(--brand)}.safety .no svg{color:var(--bad)}
+.safety .note{font-size:.9rem;color:var(--ink-soft)}
+@media (max-width:900px){.winter,.safety{grid-template-columns:1fr}}
+
+/* FAQ */
+.faq-wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(2rem,5vw,4.5rem);align-items:start}
+.faq details{border-top:1px solid var(--line)}.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:1.1rem 0;display:flex;justify-content:space-between;align-items:center;gap:1rem;font:700 1.05rem/1.35 var(--font-display)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:500 1.5rem/1 var(--font-mono);color:var(--brand);flex:none}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{padding:0 2.5rem 1.2rem 0;color:var(--ink-soft)}
+@media (max-width:900px){.faq-wrap{grid-template-columns:1fr}}
+
+/* Sign-up */
+.signup{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(2rem,5vw,4.5rem);align-items:start}
+.signup-copy{display:grid;gap:1.2rem;align-content:start}
+.next{list-style:none;margin:.4rem 0 0;padding:0;display:grid;gap:.7rem;color:var(--band-soft)}
+.next li{display:flex;gap:.7rem;align-items:flex-start}
+.next svg{width:18px;height:18px;flex:none;margin-top:.25rem;color:var(--accent)}
+.callnow a{font:800 1.5rem var(--font-display);color:var(--accent);text-decoration:none}
+.form-card{background:var(--surface);color:var(--ink);border:1px solid var(--band-line);border-radius:22px;padding:clamp(1.3rem,3vw,2.1rem);display:grid;gap:1rem}
+.form-card h3{font-size:1.5rem;color:var(--ink)}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.field{display:grid;gap:.35rem;min-width:0}
+.field label{font-weight:700;font-size:.92rem}
+.field label .opt{font-weight:400;color:var(--ink-soft)}
+.field input,.field select,.field textarea{width:100%;min-height:50px;padding:0 1rem;background:var(--bg);color:var(--ink);border:1.5px solid var(--line);border-radius:12px;font:400 1rem/1.2 var(--font-body)}
+.field textarea{min-height:96px;padding:.8rem 1rem;resize:vertical;line-height:1.45}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--brand);outline:3px solid var(--accent);outline-offset:1px}
+.field [aria-invalid=true]{border-color:var(--bad)}
+.err{min-height:1em;font-size:.82rem;color:var(--bad);font-weight:600}
+.consent{display:grid;grid-template-columns:22px 1fr;gap:.6rem;font-size:.88rem;color:var(--ink-soft);align-items:start}
+.consent input{width:20px;height:20px;margin:2px 0 0;accent-color:var(--brand)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-card .btn{width:100%}
+.status{font-size:.95rem;font-weight:600;min-height:1.4em}
+.status[data-state=ok]{color:var(--brand)}.status[data-state=info]{color:var(--ink-soft)}.status[data-state=bad]{color:var(--bad)}
+.done{display:grid;gap:.8rem;text-align:center;padding:1.5rem .5rem}
+.done .big{font-size:3rem}
+.privacy{font-size:.82rem;color:var(--ink-soft)}
+@media (max-width:900px){.signup{grid-template-columns:1fr}}
+@media (max-width:460px){.f2{grid-template-columns:1fr}}
+
+/* Footer + mobile bar */
+.foot{background:var(--band);color:var(--band-soft);border-top:1px solid var(--band-line);padding-block:2.2rem}
+.foot-in{display:flex;flex-wrap:wrap;gap:.8rem 2rem;justify-content:space-between;align-items:center;font-size:.9rem}
+.foot .brand{color:var(--band-ink);margin-right:0}.foot .brand svg{fill:var(--accent)}
+.foot a{color:var(--band-ink)}
+.mbar{display:none}
+@media (max-width:760px){
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--surface);border-top:1px solid var(--line);padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px));gap:8px}
+  .mbar .btn{min-height:46px;width:100%}
+  .mbar.one{grid-template-columns:1fr}
+  body{padding-bottom:70px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#signup">Skip to sign-up form</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="paw" viewBox="0 0 64 64">
+      <ellipse cx="32" cy="43" rx="14" ry="11"/><ellipse cx="13" cy="29" rx="6" ry="8" transform="rotate(-18 13 29)"/>
+      <ellipse cx="25" cy="16" rx="6" ry="8.5" transform="rotate(-6 25 16)"/><ellipse cx="39" cy="16" rx="6" ry="8.5" transform="rotate(6 39 16)"/>
+      <ellipse cx="51" cy="29" rx="6" ry="8" transform="rotate(18 51 29)"/>
+    </symbol>
+    <symbol id="paws" viewBox="0 0 400 300">
+      <use href="#paw" x="30" y="40" width="80" height="80" transform="rotate(-18 70 80)"/>
+      <use href="#paw" x="150" y="120" width="110" height="110" transform="rotate(12 205 175)"/>
+      <use href="#paw" x="290" y="30" width="70" height="70" transform="rotate(24 325 65)"/>
+      <use href="#paw" x="260" y="215" width="60" height="60" transform="rotate(-8 290 245)"/>
+    </symbol>
+    <symbol id="check" viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="cross" viewBox="0 0 20 20"><path d="M5 5l10 10M15 5L5 15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#top"><svg aria-hidden="true"><use href="#paw"/></svg>Tail Trails</a>
+    <nav class="nav" aria-label="Page sections">
+      <a href="#services">Services</a><a href="#how">How it works</a><a href="#why">Why us</a><a href="#faq">FAQ</a>
+    </nav>
+    <a class="tel" data-phone hidden></a>
+    <a class="btn btn-accent btn-sm" href="#signup">Book a meet &amp; greet</a>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero sec-plain" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Pet care for dogs, cats &amp; small pets · Moose Jaw, SK</p>
+      <h1>Pet care that feels like <span class="mark">family</span>, right here in Moose Jaw</h1>
+      <p class="lede">Walks, drop-in visits and overnight stays in your own home. Trained, background-checked caregivers, and a photo report after every visit.</p>
+
+      <form class="qb" id="quick" aria-label="Find the right care">
+        <div class="qb-row">
+          <span class="qb-label" id="lbl-pet">My pet is a…</span>
+          <div class="chips" role="radiogroup" aria-labelledby="lbl-pet">
+            <label class="chip"><input type="radio" name="qpet" value="Dog" checked><span>🐶 Dog</span></label>
+            <label class="chip"><input type="radio" name="qpet" value="Cat"><span>🐱 Cat</span></label>
+            <label class="chip"><input type="radio" name="qpet" value="Small pet"><span>🐰 Small pet</span></label>
+          </div>
+        </div>
+        <div class="qb-row">
+          <span class="qb-label" id="lbl-svc">I need…</span>
+          <div class="chips" role="radiogroup" aria-labelledby="lbl-svc" id="qsvc"></div>
+        </div>
+        <div>
+          <div class="qb-row"><span class="qb-label" id="lbl-n">How many pets?</span>
+            <div class="stepper" aria-labelledby="lbl-n"><button type="button" id="nMinus" aria-label="Fewer pets">−</button><output id="nPets">1</output><button type="button" id="nPlus" aria-label="More pets">+</button></div>
+          </div>
+        </div>
+        <div class="qb-foot">
+          <div class="est" aria-live="polite"><small>Estimated price</small><b id="estPrice">$20</b><i id="estNote">per 30-min walk</i></div>
+          <button class="btn btn-accent" type="submit">Book a free meet &amp; greet →</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Interactive pet -->
+    <div class="hero-visual">
+    <div class="play species-dog" id="play" aria-label="Interactive pet: tap the pet to give it a pat, or throw the ball">
+      <div class="play-ui">
+        <div class="seg" role="group" aria-label="Choose pet">
+          <button type="button" data-sp="dog" aria-pressed="true">🐶 Dog</button>
+          <button type="button" data-sp="cat" aria-pressed="false">🐱 Cat</button>
+        </div>
+        <span class="pets" aria-live="polite">👆 Pats: <b id="patCount">0</b></span>
+      </div>
+
+
+      <svg class="scene" viewBox="0 0 400 430" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+        <!-- ground -->
+        <ellipse cx="200" cy="395" rx="190" ry="34" fill="rgba(45,91,74,.14)"/>
+        <g opacity=".35" fill="var(--ph-paw)"><use href="#paw" x="40" y="360" width="26" height="26"/><use href="#paw" x="78" y="378" width="22" height="22"/><use href="#paw" x="320" y="368" width="24" height="24"/></g>
+        <ellipse id="shadow" cx="200" cy="378" rx="92" ry="12" fill="rgba(0,0,0,.12)"/>
+
+        <g id="pet" tabindex="0" role="button" aria-label="Pat the pet">
+          <!-- ===== DOG ===== -->
+          <g class="dog-only">
+            <path id="dogTail" class="tail" d="M268 290 q34 -18 40 -62" stroke="var(--fur)" stroke-width="16" fill="none" stroke-linecap="round"/>
+            <ellipse cx="205" cy="305" rx="78" ry="58" fill="var(--fur)"/>
+            <ellipse cx="190" cy="318" rx="44" ry="34" fill="var(--fur-light)"/>
+            <rect x="150" y="330" width="26" height="46" rx="13" fill="var(--fur)"/>
+            <rect x="232" y="330" width="26" height="46" rx="13" fill="var(--fur)"/>
+            <ellipse cx="163" cy="374" rx="17" ry="9" fill="var(--fur-light)"/><ellipse cx="245" cy="374" rx="17" ry="9" fill="var(--fur-light)"/>
+            <path d="M150 262 q50 22 100 0" stroke="#D2483A" stroke-width="10" fill="none" stroke-linecap="round"/>
+            <circle cx="200" cy="278" r="8" fill="var(--accent)"/>
+            <g id="head">
+              <g class="ear earL"><ellipse cx="138" cy="190" rx="22" ry="42" fill="var(--fur-dark)" transform="rotate(18 138 190)"/></g>
+              <g class="ear earR"><ellipse cx="262" cy="190" rx="22" ry="42" fill="var(--fur-dark)" transform="rotate(-18 262 190)"/></g>
+              <ellipse cx="200" cy="198" rx="68" ry="62" fill="var(--fur)"/>
+              <ellipse cx="200" cy="232" rx="40" ry="30" fill="var(--fur-light)"/>
+              <g class="blink"><ellipse cx="172" cy="190" rx="13" ry="14" fill="#fff"/><ellipse cx="228" cy="190" rx="13" ry="14" fill="#fff"/>
+              <circle class="pupil" cx="172" cy="191" r="7.5" fill="#1B1405"/><circle class="pupil" cx="228" cy="191" r="7.5" fill="#1B1405"/></g>
+              <ellipse cx="200" cy="218" rx="14" ry="10" fill="#2A1B10"/>
+              <path d="M200 228 v8 M186 238 q14 10 28 0" stroke="#2A1B10" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <path id="tongue" d="M193 240 q7 22 14 0 z" fill="#E86A7A"/>
+              <ellipse cx="158" cy="222" rx="10" ry="6" fill="#F2A7A0" opacity=".55"/><ellipse cx="242" cy="222" rx="10" ry="6" fill="#F2A7A0" opacity=".55"/>
+            </g>
+          </g>
+          <!-- ===== CAT ===== -->
+          <g class="cat-only">
+            <path id="catTail" class="tail" d="M262 330 q60 -10 52 -90 q-2 -20 14 -26" stroke="var(--cat)" stroke-width="14" fill="none" stroke-linecap="round"/>
+            <ellipse cx="200" cy="315" rx="70" ry="56" fill="var(--cat)"/>
+            <ellipse cx="196" cy="326" rx="38" ry="34" fill="var(--cat-light)"/>
+            <ellipse cx="160" cy="370" rx="22" ry="11" fill="var(--cat-light)"/><ellipse cx="236" cy="370" rx="22" ry="11" fill="var(--cat-light)"/>
+            <path d="M160 268 q40 16 80 0" stroke="#3B82C4" stroke-width="9" fill="none" stroke-linecap="round"/>
+            <circle cx="200" cy="281" r="7" fill="var(--accent)"/>
+            <g id="headCat">
+              <g class="ear earL"><path d="M140 175 L150 105 L192 150 Z" fill="var(--cat)"/><path d="M150 160 L155 122 L178 150 Z" fill="#F2A7A0"/></g>
+              <g class="ear earR"><path d="M260 175 L250 105 L208 150 Z" fill="var(--cat)"/><path d="M250 160 L245 122 L222 150 Z" fill="#F2A7A0"/></g>
+              <ellipse cx="200" cy="200" rx="66" ry="56" fill="var(--cat)"/>
+              <path d="M200 148 v22 M184 150 l4 18 M216 150 l-4 18" stroke="var(--cat-dark)" stroke-width="4" stroke-linecap="round"/>
+              <ellipse cx="200" cy="228" rx="30" ry="20" fill="var(--cat-light)"/>
+              <g class="blink"><ellipse cx="174" cy="196" rx="13" ry="13" fill="#D7F27A"/><ellipse cx="226" cy="196" rx="13" ry="13" fill="#D7F27A"/>
+              <ellipse class="pupil" cx="174" cy="196" rx="4" ry="9.5" fill="#1B1405"/><ellipse class="pupil" cx="226" cy="196" rx="4" ry="9.5" fill="#1B1405"/></g>
+              <path d="M193 218 h14 l-7 7 z" fill="#E88A98"/>
+              <path d="M200 225 v5 M190 233 q10 6 10 -3 q0 9 10 3" stroke="#2A1B10" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <path d="M168 224 h-34 M168 230 l-32 8 M232 224 h34 M232 230 l32 8" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".85"/>
+            </g>
+          </g>
+        </g>
+        <!-- ball / yarn -->
+        <g id="ball" transform="translate(-60 -60)">
+          <g class="dog-only"><circle r="14" fill="#C8E04A"/><path d="M-13 -3 q13 8 26 0 M-13 4 q13 -8 26 0" stroke="#fff" stroke-width="2" fill="none"/></g>
+          <g class="cat-only"><circle r="14" fill="#E86A7A"/><path d="M-10 -9 q12 6 4 20 M-2 -13 q14 10 0 26 M8 -11 q6 12 -6 22" stroke="#B8475A" stroke-width="2" fill="none"/><path d="M12 6 q20 10 30 0" stroke="#E86A7A" stroke-width="2" fill="none"/></g>
+        </g>
+      </svg>
+
+      <div class="bubble" id="bubble">Woof!</div>
+      <div class="play-actions">
+        <button type="button" id="throwBtn">🎾 Throw the ball</button>
+        <button type="button" id="treatBtn">🦴 Give a treat</button>
+      </div>
+      <span class="hint">Tap or click the pet to give it a pat</span>
+    </div>
+    <aside class="report" aria-label="Sample visit report">
+        <div class="report-tag"><i></i>Sample visit report</div>
+        <p class="report-pet" id="repName">Biscuit <span>· Lab mix</span></p>
+        <dl class="stats" id="repStats">
+          <div><dt>Time</dt><dd>32 min</dd></div><div><dt>Distance</dt><dd>1.8 km</dd></div><div><dt>Water</dt><dd>Yes</dd></div>
+        </dl>
+        <p class="report-note" id="repNote">Wakamow Valley trail, met two friendly dogs. Paws wiped at the door.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="sec-plain" style="padding-bottom:clamp(2.5rem,5vw,4rem)">
+  <div class="wrap">
+    <div class="trust">
+      <div><svg aria-hidden="true"><use href="#check"/></svg><span>Background-checked<small>Criminal record checks and references</small></span></div>
+      <div><svg aria-hidden="true"><use href="#check"/></svg><span>Pet First Aid trained<small>Before the first visit</small></span></div>
+      <div><svg aria-hidden="true"><use href="#check"/></svg><span>Insured<small>Liability insurance on every booking</small></span></div>
+      <div><svg aria-hidden="true"><use href="#check"/></svg><span>Photo report<small>After every single visit</small></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec sec-surface" id="services">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Services &amp; prices</p>
+      <h2>Care for every kind of pet</h2>
+      <p class="lede">Choose a single visit, or save with a pack. All prices in Canadian dollars.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc">
+        <div class="ico" aria-hidden="true">🦮</div><h3>Dog walk, 30 min</h3>
+        <p>A solo walk, or a small group of friendly dogs. Great for busy weekdays.</p>
+        <div class="who"><span>Dogs</span></div>
+        <div class="svc-foot"><span class="price">$20<small>per walk</small></span><button class="pick" data-svc="walk30">Book →</button></div>
+      </article>
+      <article class="svc">
+        <div class="ico" aria-hidden="true">🐕</div><h3>Dog walk, 60 min</h3>
+        <p>A longer route for high-energy breeds that need to burn it off.</p>
+        <div class="who"><span>Dogs</span></div>
+        <div class="svc-foot"><span class="price">$35<small>per walk</small></span><button class="pick" data-svc="walk60">Book →</button></div>
+      </article>
+      <article class="svc">
+        <div class="ico" aria-hidden="true">🏠</div><h3>Drop-in visit</h3>
+        <p>20–30 minutes: food, fresh water, play, litter box or cage cleaned, and a check that everyone is well.</p>
+        <div class="who"><span>Dogs</span><span>Cats</span><span>Small pets</span></div>
+        <div class="svc-foot"><span class="price">$15<small>per visit</small></span><button class="pick" data-svc="dropin">Book →</button></div>
+      </article>
+      <article class="svc">
+        <div class="ico" aria-hidden="true">🌙</div><h3>Overnight house sitting</h3>
+        <p>A caregiver stays the night in your home, so your pets keep their routine while you travel.</p>
+        <div class="who"><span>Dogs</span><span>Cats</span><span>Small pets</span></div>
+        <div class="svc-foot"><span class="price" data-price="overnight">Quote<small>per night</small></span><button class="pick" data-svc="overnight">Ask →</button></div>
+      </article>
+      <article class="svc">
+        <div class="ico" aria-hidden="true">🚗</div><h3>Pet taxi</h3>
+        <p>A safe ride to the vet, the groomer or the park, and back home again.</p>
+        <div class="who"><span>Dogs</span><span>Cats</span><span>Small pets</span></div>
+        <div class="svc-foot"><span class="price">$25<small>per trip</small></span><button class="pick" data-svc="taxi">Book →</button></div>
+      </article>
+      <article class="svc">
+        <div class="ico" aria-hidden="true">🧸</div><h3>Companion time</h3>
+        <p>Play, cuddles and company for pets who are home alone all day, or older pets who need a gentle hand.</p>
+        <div class="who"><span>Dogs</span><span>Cats</span><span>Small pets</span></div>
+        <div class="svc-foot"><span class="price">$22<small>per hour</small></span><button class="pick" data-svc="companion">Book →</button></div>
+      </article>
+    </div>
+    <div class="packs">
+      <div class="pack"><span class="pack-label">Weekly pack</span><span class="pack-price">$90</span><p>5 dog walks of 30 minutes</p><span class="save">Save $10</span></div>
+      <div class="pack"><span class="pack-label">Monthly pack</span><span class="pack-price">$340</span><p>20 dog walks of 30 minutes</p><span class="save">Save $60</span></div>
+    </div>
+    <p class="fine">Every visit includes a photo update, a short report and light tidying, like wiping paws. Prices can change with travel distance or the number of pets in one home. We'll confirm your exact price at the free meet &amp; greet.</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sec sec-band" id="how">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Every visit includes</p>
+      <h2>You'll always know how their day went</h2>
+    </div>
+    <ul class="incl">
+      <li><b aria-hidden="true">📸</b><h3>Photos</h3><p>A few pictures of your pet from every visit.</p></li>
+      <li><b aria-hidden="true">📝</b><h3>Visit report</h3><p>Time, food, water, bathroom breaks and mood, written up for you.</p></li>
+      <li><b aria-hidden="true">🔑</b><h3>Home checked</h3><p>Doors locked, lights as you like them, mail brought in if you ask.</p></li>
+      <li><b aria-hidden="true">💬</b><h3>Quick replies</h3><p>Message us during a booking and we answer.</p></li>
+    </ul>
+    <ol class="steps">
+      <li><h3>Leave your details</h3><p>Name, phone, email and type of pet. That's it. We call you.</p></li>
+      <li><h3>Free meet &amp; greet</h3><p>We visit your home to meet your pet, learn the routine and collect a key.</p></li>
+      <li><h3>Choose a schedule</h3><p>One-off visits, a regular weekly plan, or care while you travel.</p></li>
+      <li><h3>Relax</h3><p>Photos and a report arrive after every visit.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec sec-plain" id="why">
+  <div class="wrap why">
+    <figure class="ph">
+      <svg class="ph-paws" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#paws"/></svg>
+      <img src="images/cat-home-visit.jpg" alt="A cat relaxing on a sofa at home" loading="lazy" decoding="async" onerror="this.remove()">
+    </figure>
+    <div>
+      <p class="eyebrow">Why Tail Trails</p>
+      <h2 style="margin-top:1rem">A trained team, not a one-person gig</h2>
+      <div class="why-list">
+        <div><h3>Trained before the first visit</h3><p>Every caregiver completes 20 hours of training in pet behaviour, safe handling, Pet First Aid and reporting back to you.</p></div>
+        <div><h3>Screened and insured</h3><p>Criminal record checks, references and a three-month probation for new caregivers. The business carries liability insurance.</p></div>
+        <div><h3>Backup when someone is sick</h3><p>Trained caregivers on standby keep your booking on schedule.</p></div>
+        <div><h3>Your pet stays home</h3><p>Familiar smells, their own bed and no kennel stress, for dogs, cats and small pets alike.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WINTER + SAFETY -->
+<section class="sec sec-tint" id="safety">
+  <div class="wrap">
+    <div class="winter">
+      <div style="display:grid;gap:1.1rem">
+        <p class="eyebrow">Winter in Saskatchewan</p>
+        <p class="big-temp">−20 °C</p>
+        <h2>Winter care, done properly</h2>
+        <p class="lede">At −20 °C and colder we use coats and paw protection, shorten walks, and move play indoors when the wind chill is dangerous. Drop-ins also check that your home is warm and pipes are fine.</p>
+      </div>
+      <figure class="ph">
+        <svg class="ph-paws" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#paws"/></svg>
+        <img src="images/winter-walk.jpg" alt="A dog in a winter coat walking in the snow" loading="lazy" decoding="async" onerror="this.remove()">
+      </figure>
+    </div>
+    <div class="safety">
+      <div class="yes">
+        <h3>How we keep pets safe</h3>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#check"/></svg>Double-clipped leashes and GPS tracking on every walk</li>
+          <li><svg aria-hidden="true"><use href="#check"/></svg>A hands-on assessment before we accept a new pet</li>
+          <li><svg aria-hidden="true"><use href="#check"/></svg>Your vet’s details and emergency contact on file</li>
+          <li><svg aria-hidden="true"><use href="#check"/></svg>A clear incident process, and we call you first</li>
+        </ul>
+      </div>
+      <div class="no">
+        <h3>What we don’t do</h3>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#cross"/></svg>Diagnose illness or give medical advice</li>
+          <li><svg aria-hidden="true"><use href="#cross"/></svg>Give complex prescription medication</li>
+          <li><svg aria-hidden="true"><use href="#cross"/></svg>Behaviour training or professional grooming</li>
+          <li><svg aria-hidden="true"><use href="#cross"/></svg>Walk dogs with an unassessed history of aggression</li>
+        </ul>
+        <p class="note">If your pet needs medical care, we contact you and the nearest vet clinic right away.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec sec-plain" id="faq">
+  <div class="wrap faq-wrap">
+    <div style="display:grid;gap:1rem;align-content:start"><p class="eyebrow">Questions</p><h2>Before you sign up</h2></div>
+    <div class="faq">
+      <details><summary>Do I need to be home?</summary><p>No. We collect your key at the meet &amp; greet and lock up after every visit.</p></details>
+      <details><summary>What pets do you care for?</summary><p>Dogs, cats and small pets such as rabbits, guinea pigs, hamsters, birds and fish. Leave your details in the form and we'll talk it through when we call.</p></details>
+      <details><summary>Do you walk cats?</summary><p>Cats don’t need walks, so we visit instead: food, fresh water, a clean litter box and play time.</p></details>
+      <details><summary>How does overnight house sitting work?</summary><p>A caregiver stays the night in your home so your pets keep their normal routine. Send a request with your dates and we'll give you a price.</p></details>
+      <details><summary>What if my dog pulls, barks or doesn’t like other dogs?</summary><p>Every new pet is assessed first. If we can’t care for your pet safely, we tell you and don’t take the booking.</p></details>
+      <details><summary>Can you give my pet medication?</summary><p>We don’t give complex prescription medication. Tell us what your pet needs at the meet &amp; greet and we'll be clear about what we can and can’t do.</p></details>
+      <details><summary>How fast will you reply?</summary><p>We contact every request by the next business day, often the same day.</p></details>
+      <details><summary>Where do you work?</summary><p>Moose Jaw, Saskatchewan. Nearby towns may follow as the team grows.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- SIGN-UP -->
+<section class="sec sec-band" id="signup">
+  <div class="wrap signup">
+    <div class="signup-copy">
+      <p class="eyebrow">Sign up</p>
+      <h2>Book your free meet &amp; greet</h2>
+      <p class="lede">Just leave your name, phone, email and type of pet. We'll call you by the next business day to talk it through and set up a time.</p>
+      <ul class="next">
+        <li><svg aria-hidden="true"><use href="#check"/></svg>You get an email confirmation right away</li>
+        <li><svg aria-hidden="true"><use href="#check"/></svg>We call to learn about your pet and book a meet &amp; greet</li>
+        <li><svg aria-hidden="true"><use href="#check"/></svg>You choose a schedule that suits you</li>
+      </ul>
+      <p class="callnow" data-phone-block hidden><span class="eyebrow">Prefer to call?</span><br><a data-phone></a></p>
+    </div>
+    <div class="form-card">
+      <form id="signup-form" novalidate style="display:grid;gap:1rem">
+        <h3>Your details</h3>
+        <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" placeholder="Jane Smith" required><span class="err" id="err-name"></span></div>
+        <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="306 555 0123" required><span class="err" id="err-phone"></span></div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" placeholder="jane@example.com" required><span class="err" id="err-email"></span></div>
+        <div class="field"><label for="f-pettype">Type of pet</label>
+          <select id="f-pettype" name="petType"><option value="">Choose one</option><option>Dog</option><option>Cat</option><option>Small pet</option><option>More than one kind</option></select>
+          <span class="err" id="err-pettype"></span></div>
+        <input type="hidden" id="f-service" name="service" value="">
+        <div class="hp" aria-hidden="true"><label for="f-web">Leave empty</label><input id="f-web" name="website" tabindex="-1" autocomplete="off"></div>
+        <label class="consent"><input type="checkbox" id="f-ok" required><span>I agree that Tail Trails may call or email me about this request.</span></label>
+        <span class="err" id="err-ok"></span>
+        <button class="btn btn-accent" type="submit" id="f-submit">Request my free meet &amp; greet</button>
+        <p class="status" id="form-status" role="status" aria-live="polite"></p>
+        <p class="privacy">We use your details only to contact you about Tail Trails.</p>
+      </form>
+      <div class="done" id="done" hidden tabindex="-1">
+        <div class="big" aria-hidden="true">🐾</div>
+        <h3>Request received!</h3>
+        <p id="doneText" style="color:var(--ink-soft)"></p>
+        <button class="btn btn-ghost" type="button" id="again">Send another request</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <a class="brand" href="#top"><svg aria-hidden="true"><use href="#paw"/></svg>Tail Trails</a>
+    <span>Pet care for dogs, cats &amp; small pets · Moose Jaw, Saskatchewan · Prices in CAD</span>
+    <span data-email-block hidden><a data-email></a></span>
+    <span>© <span id="yr">2026</span> Tail Trails</span>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar"><a class="btn btn-ghost" data-phone data-short>Call</a><a class="btn btn-accent" href="#signup">Book meet &amp; greet</a></div>
+
+<script>
+/* =====================================================================
+   SETTINGS: the only part you need to edit.
+   ===================================================================== */
+const CONFIG = {
+  formEndpoint: "PASTE_YOUR_WEB_APP_URL_HERE", // Google Apps Script Web app URL (README step 3)
+  phone: "",          // e.g. "+13065550123"  (leave "" to hide)
+  phoneDisplay: "",   // e.g. "306-555-0123"
+  email: "",          // public email (leave "" to hide)
+  overnightPrice: null // e.g. 55 to show "$55 per night" instead of "Quote"
+};
+/* ===================================================================== */
+
+const $ = id => document.getElementById(id);
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+$('yr').textContent = new Date().getFullYear();
+
+/* ---------- services (one list used by widget + form) ---------- */
+const SERVICES = {
+  walk30:    {label:'Dog walk, 30 min', short:'Walk 30 min', price:20, unit:'per 30-min walk', pets:['Dog']},
+  walk60:    {label:'Dog walk, 60 min', short:'Walk 60 min', price:35, unit:'per 60-min walk', pets:['Dog']},
+  dropin:    {label:'Drop-in visit', short:'Drop-in', price:15, unit:'per visit', pets:['Dog','Cat','Small pet']},
+  overnight: {label:'Overnight house sitting', short:'Overnight', price:CONFIG.overnightPrice, unit:'per night', pets:['Dog','Cat','Small pet']},
+  taxi:      {label:'Pet taxi', short:'Pet taxi', price:25, unit:'per trip', pets:['Dog','Cat','Small pet']},
+  companion: {label:'Companion time', short:'Companion', price:22, unit:'per hour', pets:['Dog','Cat','Small pet']}
+};
+if (CONFIG.overnightPrice) document.querySelector('[data-price=overnight]').innerHTML = '$' + CONFIG.overnightPrice + '<small>per night</small>';
+
+/* ---------- contact details ---------- */
+(() => {
+  if (CONFIG.phone) {
+    document.querySelectorAll('[data-phone]').forEach(a => { a.href = 'tel:' + CONFIG.phone; a.textContent = a.hasAttribute('data-short') ? 'Call' : (CONFIG.phoneDisplay || CONFIG.phone); a.hidden = false; });
+    document.querySelectorAll('[data-phone-block]').forEach(b => b.hidden = false);
+  } else { $('mbar').querySelector('[data-phone]').remove(); $('mbar').classList.add('one'); }
+  if (CONFIG.email) {
+    document.querySelectorAll('[data-email]').forEach(a => { a.href = 'mailto:' + CONFIG.email; a.textContent = CONFIG.email; });
+    document.querySelectorAll('[data-email-block]').forEach(b => b.hidden = false);
+  }
+})();
+
+/* ---------- quick-book widget ---------- */
+const quick = {pet:'Dog', svc:'walk30', n:1};
+function renderSvcChips() {
+  const box = $('qsvc'); box.innerHTML = '';
+  Object.entries(SERVICES).forEach(([k, s]) => {
+    const ok = s.pets.includes(quick.pet);
+    const l = document.createElement('label'); l.className = 'chip';
+    l.innerHTML = '<input type="radio" name="qsvc" value="' + k + '"' + (k === quick.svc ? ' checked' : '') + (ok ? '' : ' disabled') + '><span>' + s.short + '</span>';
+    box.appendChild(l);
+  });
+}
+function updateEstimate() {
+  const s = SERVICES[quick.svc];
+  if (!s.price) { $('estPrice').textContent = 'Quote'; $('estNote').textContent = 'we price overnights at the meet & greet'; return; }
+  $('estPrice').textContent = '$' + s.price;
+  $('estNote').textContent = s.unit + (quick.n > 1 ? ' · extra pets confirmed at meet & greet' : '');
+}
+document.querySelectorAll('input[name=qpet]').forEach(r => r.addEventListener('change', () => {
+  quick.pet = r.value;
+  if (!SERVICES[quick.svc].pets.includes(quick.pet)) quick.svc = 'dropin';
+  renderSvcChips(); updateEstimate();
+  if (quick.pet === 'Cat') setSpecies('cat'); else if (quick.pet === 'Dog') setSpecies('dog');
+}));
+$('qsvc').addEventListener('change', e => { if (e.target.name === 'qsvc') { quick.svc = e.target.value; updateEstimate(); } });
+$('nMinus').onclick = () => { quick.n = Math.max(1, quick.n - 1); $('nPets').textContent = quick.n; updateEstimate(); };
+$('nPlus').onclick = () => { quick.n = Math.min(6, quick.n + 1); $('nPets').textContent = quick.n; updateEstimate(); };
+renderSvcChips(); updateEstimate();
+
+function goToForm(svc, pet) {
+  if (svc) $('f-service').value = svc;
+  if (pet) $('f-pettype').value = pet;
+  $('err-pettype').textContent = '';
+  $('signup').scrollIntoView({behavior: reduce ? 'auto' : 'smooth'});
+  setTimeout(() => $('f-name').focus({preventScroll: true}), reduce ? 0 : 650);
+}
+$('quick').addEventListener('submit', e => { e.preventDefault(); goToForm(quick.svc, quick.pet); });
+document.querySelectorAll('.pick').forEach(b => b.addEventListener('click', () => goToForm(b.dataset.svc)));
+
+/* ---------- interactive pet ---------- */
+const play = $('play'), pet = $('pet'), bubble = $('bubble'), ball = $('ball'), svg = play.querySelector('svg.scene');
+let species = 'dog', pats = 0, happyT, bubbleT, busy = false;
+const SAY = {dog:['Woof!','Arf arf!','*happy wiggle*','Walk time?','Best day ever!'], cat:['Mrrp!','Purrrr…','Mew!','*slow blink*','Treats?']};
+const REPORT = {
+  dog:{name:'Biscuit <span>· Lab mix</span>', stats:[['Time','32 min'],['Distance','1.8 km'],['Water','Yes']], note:'Wakamow Valley trail, met two friendly dogs. Paws wiped at the door.'},
+  cat:{name:'Mochi <span>· Tabby</span>', stats:[['Visit','25 min'],['Food','Ate all'],['Litter','Clean']], note:'Played with the feather wand, then napped in the sun. Water topped up.'}
+};
+function setSpecies(sp) {
+  species = sp;
+  play.classList.toggle('species-dog', sp === 'dog'); play.classList.toggle('species-cat', sp === 'cat');
+  play.querySelectorAll('[data-sp]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.sp === sp)));
+  $('throwBtn').textContent = sp === 'dog' ? '🎾 Throw the ball' : '🧶 Toss the yarn';
+  $('treatBtn').textContent = sp === 'dog' ? '🦴 Give a treat' : '🐟 Give a treat';
+  const r = REPORT[sp];
+  $('repName').innerHTML = r.name;
+  $('repStats').innerHTML = r.stats.map(s => '<div><dt>' + s[0] + '</dt><dd>' + s[1] + '</dd></div>').join('');
+  $('repNote').textContent = r.note;
+}
+play.querySelectorAll('[data-sp]').forEach(b => b.addEventListener('click', () => setSpecies(b.dataset.sp)));
+
+// SVG coordinate -> px inside .play
+function toPx(x, y) {
+  const pt = svg.createSVGPoint(); pt.x = x; pt.y = y;
+  const p = pt.matrixTransform(svg.getScreenCTM()), r = play.getBoundingClientRect();
+  return [p.x - r.left, p.y - r.top];
+}
+function say(text) {
+  const [x, y] = toPx(200, species === 'dog' ? 130 : 105);
+  bubble.textContent = text; bubble.style.left = x + 'px'; bubble.style.top = y + 'px';
+  bubble.classList.add('on'); clearTimeout(bubbleT); bubbleT = setTimeout(() => bubble.classList.remove('on'), 1300);
+}
+function hearts(n, emoji) {
+  if (reduce) return;
+  const [x, y] = toPx(200, 170);
+  for (let i = 0; i < n; i++) {
+    const h = document.createElement('span'); h.className = 'heart'; h.textContent = emoji || (Math.random() < .5 ? '❤️' : '💛');
+    h.style.left = (x + (Math.random() * 80 - 40)) + 'px'; h.style.top = y + 'px'; h.style.setProperty('--dx', (Math.random() * 60 - 30) + 'px');
+    h.style.animationDelay = (i * 0.08) + 's';
+    play.appendChild(h); setTimeout(() => h.remove(), 1500);
+  }
+}
+function happy(ms) {
+  pet.classList.add('happy'); clearTimeout(happyT); happyT = setTimeout(() => pet.classList.remove('happy'), ms || 1600);
+  if (!reduce) { pet.classList.remove('hop'); void pet.getBBox(); pet.classList.add('hop'); }
+}
+function patPet() {
+  pats++; $('patCount').textContent = pats;
+  happy(); hearts(3);
+  const lines = SAY[species];
+  say(pats % 10 === 0 ? (species === 'dog' ? pats + ' pats! 🎉' : 'Purr x' + pats) : lines[Math.floor(Math.random() * lines.length)]);
+}
+pet.addEventListener('click', patPet);
+pet.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); patPet(); } });
+
+// eyes follow the pointer
+const pupils = () => play.querySelectorAll((species === 'dog' ? '.dog-only' : '.cat-only') + ' .pupil');
+const home = new Map();
+play.querySelectorAll('.pupil').forEach(p => home.set(p, [+(p.getAttribute('cx')), +(p.getAttribute('cy'))]));
+function lookAt(sx, sy) {
+  pupils().forEach(p => {
+    const [cx, cy] = home.get(p), dx = sx - cx, dy = sy - cy, d = Math.hypot(dx, dy) || 1, m = Math.min(5, d / 20);
+    p.setAttribute('cx', cx + dx / d * m); p.setAttribute('cy', cy + dy / d * m);
+  });
+}
+function svgPoint(clientX, clientY) {
+  const pt = svg.createSVGPoint(); pt.x = clientX; pt.y = clientY;
+  return pt.matrixTransform(svg.getScreenCTM().inverse());
+}
+addEventListener('pointermove', e => { if (busy) return; const p = svgPoint(e.clientX, e.clientY); lookAt(p.x, p.y); }, {passive: true});
+
+// throw ball / yarn
+$('throwBtn').addEventListener('click', () => {
+  if (busy) return; busy = true;
+  const start = [60, 360], peak = [200, 40], end = [330, 372], T = reduce ? 1 : 1100, t0 = performance.now();
+  function frame(now) {
+    const t = Math.min(1, (now - t0) / T);
+    const x = (1 - t) * (1 - t) * start[0] + 2 * (1 - t) * t * peak[0] + t * t * end[0];
+    const y = (1 - t) * (1 - t) * start[1] + 2 * (1 - t) * t * peak[1] + t * t * end[1];
+    ball.setAttribute('transform', 'translate(' + x + ' ' + y + ') rotate(' + (t * 540) + ')');
+    lookAt(x, y);
+    if (t < 1) requestAnimationFrame(frame);
+    else {
+      happy(2200); say(species === 'dog' ? 'Got it! Again?' : 'Mine now.');
+      hearts(4, species === 'dog' ? '🎾' : '🧶');
+      setTimeout(() => { ball.setAttribute('transform', 'translate(-60 -60)'); busy = false; }, 1800);
+    }
+  }
+  requestAnimationFrame(frame);
+});
+$('treatBtn').addEventListener('click', () => {
+  happy(1800); hearts(5, species === 'dog' ? '🦴' : '🐟');
+  say(species === 'dog' ? 'Yum! *sits nicely*' : 'Acceptable.');
+});
+
+/* ---------- sign-up form → Google Sheet ---------- */
+(() => {
+  const form = $('signup-form'), statusEl = $('form-status'), btn = $('f-submit');
+  const rules = {
+    name: v => v.trim().length >= 2 && /[A-Za-zÀ-ɏ]/.test(v) ? '' : 'Enter your full name.',
+    phone: v => { let d = v.replace(/\D/g, ''); if (d.length === 11 && d[0] === '1') d = d.slice(1); return d.length === 10 ? '' : 'Enter a 10-digit phone number, e.g. 306 555 0123.'; },
+    email: v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) ? '' : 'Enter an email like jane@example.com.'
+  };
+  const setErr = (id, msg) => { const i = $('f-' + id); $('err-' + id).textContent = msg; msg ? i.setAttribute('aria-invalid', 'true') : i.removeAttribute('aria-invalid'); };
+  const setStatus = (msg, st) => { statusEl.textContent = msg; st ? statusEl.setAttribute('data-state', st) : statusEl.removeAttribute('data-state'); };
+  Object.keys(rules).forEach(id => {
+    const i = $('f-' + id);
+    i.addEventListener('input', () => { setErr(id, ''); setStatus(''); });
+    i.addEventListener('blur', () => { if (i.value) setErr(id, rules[id](i.value)); });
+  });
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    let firstBad = null;
+    Object.keys(rules).forEach(id => { const m = rules[id]($('f-' + id).value); setErr(id, m); if (m && !firstBad) firstBad = $('f-' + id); });
+    if (!$('f-pettype').value) { $('err-pettype').textContent = 'Choose the type of pet.'; $('f-pettype').setAttribute('aria-invalid','true'); if (!firstBad) firstBad = $('f-pettype'); }
+    else { $('err-pettype').textContent = ''; $('f-pettype').removeAttribute('aria-invalid'); }
+    if (!firstBad && !$('f-ok').checked) { $('err-ok').textContent = 'Please tick the box so we can contact you.'; firstBad = $('f-ok'); } else $('err-ok').textContent = '';
+    if (firstBad) { firstBad.focus(); setStatus('Please fix the highlighted fields.', 'bad'); return; }
+
+    const data = Object.fromEntries(new FormData(form).entries());
+    data.serviceLabel = (SERVICES[data.service] || {label: ''}).label;
+    data.consent = 'yes'; data.page = location.href;
+    const first = data.name.trim().split(/\s+/)[0];
+
+    if (!CONFIG.formEndpoint || CONFIG.formEndpoint.startsWith('PASTE')) {
+      setStatus('Preview mode: the form is not connected yet, so nothing was sent. Add your Web app URL in CONFIG (see README).', 'info');
+      return;
+    }
+    btn.disabled = true; setStatus('Sending…', 'info');
+    try {
+      const res = await fetch(CONFIG.formEndpoint, {method: 'POST', headers: {'Content-Type': 'text/plain;charset=utf-8'}, body: JSON.stringify(data)});
+      let out = {}; try { out = await res.json(); } catch (_) {}
+      if (out.ok === false) throw new Error(out.error || 'rejected');
+      $('doneText').textContent = 'Thanks, ' + first + '! We\'ll contact you ' + (out.callByText ? 'by ' + out.callByText : 'by the next business day') +
+        ' to hear about your ' + data.petType.toLowerCase().replace('more than one kind','pets') + ' and set up a free meet & greet. A confirmation is on its way to ' + data.email + '.';
+      form.hidden = true; $('done').hidden = false; $('done').focus();
+      form.reset(); $('f-service').value = ''; setStatus('');
+      setSpecies(data.petType === 'Cat' ? 'cat' : species);
+    } catch (err) {
+      setStatus('Sorry, your request didn\'t go through. Please try again' + (CONFIG.phone ? ' or call ' + (CONFIG.phoneDisplay || CONFIG.phone) : '') + '.', 'bad');
+    } finally { btn.disabled = false; }
+  });
+  $('again').addEventListener('click', () => { $('done').hidden = true; form.hidden = false; $('f-name').focus(); });
+})();
+</script>
+</body>
+</html>
